@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 /**
- * Local {{CITY}} MCP -- entry point.
+ * Local Dallas MCP -- entry point.
  *
- * Built by {{MAINTAINER_NAME}} -- {{MAINTAINER_URL}}
+ * Built by Ed Neuhaus -- https://edneuhaus.com
  *
  * License: Apache License 2.0. See LICENSE in the repository root. Please
  * preserve the NOTICE attribution when redistributing.
  *
- * This is a TEMPLATE -- see STANDARD.md for the spec this implements and
- * CONTRIBUTING.md for how to add your own tools. Replace every {{...}}
- * placeholder (search the repo for `{{`) before shipping.
+ * Built from local-city-mcp-template -- see STANDARD.md for the spec and
+ * CONTRIBUTING.md for how to add tools.
  */
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -22,24 +21,24 @@ import { log, attach as attachLogger } from "./lib/logger.js";
 
 import { aboutTool } from "./tools/meta/about.js";
 import { cityNwsAlerts } from "./tools/environment/nws-alerts.js";
+import { dallasTeaSchools } from "./tools/civic/tea-schools.js";
 
 // Add every tool file's export here as you build them.
-const ALL_TOOLS = [aboutTool, cityNwsAlerts];
+const ALL_TOOLS = [aboutTool, cityNwsAlerts, dallasTeaSchools];
 
 const SERVER_INSTRUCTIONS = `${ATTRIBUTION_TEXT}
 
-This MCP exposes official {{CITY}} public datasets. No API keys required.
-
-ROUTING:
-  - (Add guidance here once you have a composed "one address -> everything"
-    tool -- see STANDARD.md section 4, "One composed entry point". Tell the
-    LLM to call it first for address-centric questions instead of guessing
-    which of N tools to chain.)
+This MCP exposes official Dallas public datasets. No API keys required.
 
 COVERAGE:
-  - (List what this server actually covers -- property, permits, civic data,
-    schools, environment, etc. -- and what it explicitly does NOT cover, so
-    the LLM doesn't guess wrong and hallucinate an answer.)
+  - Weather: active National Weather Service alerts for any Dallas-area point.
+  - Schools: Texas Education Agency accountability ratings + AskTED campus
+    directory (statewide dataset), searchable by campus/district/county/city.
+    Dallas ISD, Plano ISD, Highland Park ISD, and every other TX ISD. Does
+    NOT map an address to its assigned school (attendance zones are managed
+    by individual ISDs, not TEA).
+  - Early-stage server -- more Dallas/Dallas County data (permits, property
+    records, civic data) planned. See CONTRIBUTING.md.
 
 EVERY response includes a source URL. The MCP does not write to any system.`;
 
@@ -48,7 +47,7 @@ async function main() {
     {
       name: NAME,
       version: VERSION,
-      description: `Local {{CITY}} MCP -- ${ATTRIBUTION_TEXT}`,
+      description: `Local Dallas MCP -- ${ATTRIBUTION_TEXT}`,
     },
     {
       capabilities: { tools: {}, logging: {} },
@@ -66,7 +65,7 @@ async function main() {
   await server.connect(transport);
   attachLogger(server);
 
-  const tier = (process.env.LOCAL_{{CITY_SLUG_UPPER}}_MCP_TIER || "all").toLowerCase();
+  const tier = (process.env.LOCAL_DALLAS_MCP_TIER || "all").toLowerCase();
   log.info(
     `v${VERSION} ready over stdio. ${registered}/${ALL_TOOLS.length} tools registered (tier=${tier}).`
   );
@@ -90,6 +89,6 @@ async function main() {
 
 main().catch((err) => {
   // Cannot use logger here -- transport may never have come up.
-  process.stderr.write(`[local-{{CITY_SLUG}}-mcp] fatal: ${err?.stack ?? err}\n`);
+  process.stderr.write(`[local-dallas-mcp] fatal: ${err?.stack ?? err}\n`);
   process.exit(1);
 });

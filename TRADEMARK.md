@@ -4,10 +4,10 @@ This software is licensed under the **Apache License 2.0** (see [LICENSE](LICENS
 Section 6 of that license expressly grants **no trademark rights**. This notice
 states which marks are reserved and how they may be used.
 
-The following are trademarks of **{{MAINTAINER_NAME}}**{{MAINTAINER_ORG_SUFFIX}}:
+The following are trademarks of **Ed Neuhaus**:
 
-- "Local {{CITY}} MCP"
-- "{{MAINTAINER_NAME}}"{{MAINTAINER_ORG_SUFFIX}}
+- "Local Dallas MCP"
+- "Ed Neuhaus"
 - Any associated logo and word marks
 
 The Apache License 2.0 under which this software is distributed does **not**
@@ -21,15 +21,15 @@ may not:
 - Use the marks in the name of your fork, product, service, package,
   container, repository, or domain.
 - Use the marks in any way that suggests endorsement, sponsorship,
-  affiliation, partnership, or official relationship with {{MAINTAINER_NAME}}.
+  affiliation, partnership, or official relationship with Ed Neuhaus.
 - Use the marks in advertising, marketing, or promotional material.
 
 ## What you MAY do
 
 You may refer to the marks factually for attribution purposes, including:
 
-- Stating that your fork is "based on Local {{CITY}} MCP by {{MAINTAINER_NAME}}".
-- Linking to {{MAINTAINER_URL}} as the origin of the project.
+- Stating that your fork is "based on Local Dallas MCP by Ed Neuhaus".
+- Linking to https://edneuhaus.com as the origin of the project.
 - Ordinary descriptive references permitted under nominative fair use.
 
 ## Permissions
@@ -37,9 +37,6 @@ You may refer to the marks factually for attribution purposes, including:
 For any use of the marks beyond what is described above, you must obtain
 written permission in advance:
 
-**{{MAINTAINER_NAME}}**
-{{MAINTAINER_URL}}
+**Ed Neuhaus**
+https://edneuhaus.com
 
---
-TEMPLATE NOTE: fill in {{CITY}}, {{MAINTAINER_NAME}}, {{MAINTAINER_ORG_SUFFIX}},
-{{MAINTAINER_URL}} before shipping. Delete this note.

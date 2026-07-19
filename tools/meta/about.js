@@ -28,7 +28,7 @@ export const aboutTool = {
       `**License terms:** ${LICENSE_URL}\n\n` +
       `## What this is\n\n` +
       `An MCP server giving Claude (and other MCP clients) plain-English ` +
-      `access to official {{CITY}} public datasets. Every response includes ` +
+      `access to official Dallas public datasets. Every response includes ` +
       `a \`source_url\` so users can verify the underlying record.\n\n` +
       `## Forking\n\n` +
       `This software is open source under the Apache License 2.0 — free to use, ` +

@@ -1,11 +1,11 @@
 {
-  "name": "local-{{CITY_SLUG}}-mcp",
+  "name": "local-dallas-mcp",
   "version": "0.1.0",
-  "description": "Your AI's local guide to {{CITY}}: official, public, no-key data via MCP. Built from the local-city-mcp-template standard.",
+  "description": "Your AI's local guide to Dallas: official, public, no-key data via MCP. Built from the local-city-mcp-template standard.",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "local-{{CITY_SLUG}}-mcp": "index.js"
+    "local-dallas-mcp": "index.js"
   },
   "files": [
     "index.js",
@@ -37,19 +37,19 @@
     "anthropic",
     "llm-tools",
     "ai-tools",
-    "{{CITY_SLUG}}",
+    "dallas",
     "civic-data",
     "open-data"
   ],
-  "author": "{{MAINTAINER_NAME}}",
+  "author": "Ed Neuhaus",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/{{GITHUB_USER}}/local-{{CITY_SLUG}}-mcp#readme",
+  "homepage": "https://github.com/mindwear-capitian/local-dallas-mcp#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{GITHUB_USER}}/local-{{CITY_SLUG}}-mcp.git"
+    "url": "git+https://github.com/mindwear-capitian/local-dallas-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/{{GITHUB_USER}}/local-{{CITY_SLUG}}-mcp/issues"
+    "url": "https://github.com/mindwear-capitian/local-dallas-mcp/issues"
   },
   "engines": {
     "node": ">=20"

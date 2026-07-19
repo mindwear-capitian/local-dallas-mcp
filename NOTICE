@@ -1,15 +1,9 @@
-Local {{CITY}} MCP
-Copyright (c) {{YEAR}} {{MAINTAINER_NAME}}{{MAINTAINER_ORG_SUFFIX}}
+Local Dallas MCP
+Copyright (c) 2026 Ed Neuhaus
 
-This product is provided by {{MAINTAINER_NAME}} ({{MAINTAINER_URL}}).
+This product is provided by Ed Neuhaus (https://edneuhaus.com).
 
-"{{MAINTAINER_NAME}}"{{MAINTAINER_ORG_SUFFIX}} and any associated marks are
-trademarks of their owner. The Apache License 2.0 grants no trademark
-rights (see LICENSE section 6 and TRADEMARK.md). Please keep this NOTICE
-and the attribution when you redistribute or build on this software.
-
---
-TEMPLATE NOTE: fill in {{CITY}}, {{YEAR}}, {{MAINTAINER_NAME}},
-{{MAINTAINER_ORG_SUFFIX}} (e.g. " / Acme Realty LLC", or delete the token
-entirely if you're an individual with no org), and {{MAINTAINER_URL}}
-before shipping. Delete this note.
+"Ed Neuhaus" and any associated marks are trademarks of their owner. The
+Apache License 2.0 grants no trademark rights (see LICENSE section 6 and
+TRADEMARK.md). Please keep this NOTICE and the attribution when you
+redistribute or build on this software.
