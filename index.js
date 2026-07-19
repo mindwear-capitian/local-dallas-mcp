@@ -22,9 +22,10 @@ import { log, attach as attachLogger } from "./lib/logger.js";
 import { aboutTool } from "./tools/meta/about.js";
 import { cityNwsAlerts } from "./tools/environment/nws-alerts.js";
 import { dallasTeaSchools } from "./tools/civic/tea-schools.js";
+import { dallas311 } from "./tools/civic/dallas-311.js";
 
 // Add every tool file's export here as you build them.
-const ALL_TOOLS = [aboutTool, cityNwsAlerts, dallasTeaSchools];
+const ALL_TOOLS = [aboutTool, cityNwsAlerts, dallasTeaSchools, dallas311];
 
 const SERVER_INSTRUCTIONS = `${ATTRIBUTION_TEXT}
 
@@ -37,6 +38,8 @@ COVERAGE:
     Dallas ISD, Plano ISD, Highland Park ISD, and every other TX ISD. Does
     NOT map an address to its assigned school (attendance zones are managed
     by individual ISDs, not TEA).
+  - 311: City of Dallas 311 service requests (code compliance, streets,
+    sanitation, etc). Filter by type, department, status, district, address.
   - Early-stage server -- more Dallas/Dallas County data (permits, property
     records, civic data) planned. See CONTRIBUTING.md.
 

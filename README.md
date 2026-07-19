@@ -11,7 +11,7 @@
 **Source:** https://github.com/mindwear-capitian/local-dallas-mcp
 **Part of a family:** [local-city-mcp-template](https://github.com/mindwear-capitian/local-city-mcp-template) — the spec, the template, and the full list of cities built so far.
 
-> 🚧 **Early-stage.** Two tools live today (weather alerts, school ratings). More Dallas/Dallas-area civic and property data planned — see [CONTRIBUTING.md](CONTRIBUTING.md).
+> 🚧 **Early-stage.** Three tools live today (weather alerts, school ratings, 311). More Dallas/Dallas-area civic and property data planned — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
@@ -46,15 +46,17 @@ claude mcp add local-dallas npx -y github:mindwear-capitian/local-dallas-mcp
 - *"Is there an active weather alert for Dallas right now?"*
 - *"What's the TEA rating for Dallas ISD?"*
 - *"Show me A-rated elementary schools in Dallas county."*
+- *"Any open code compliance 311 requests in council district 10?"*
 
 ---
 
-## Tools (2 live)
+## Tools (3 live)
 
 | Tool | What it does |
 |------|--------------|
 | `dallas_nws_alerts` | Active National Weather Service alerts (severe thunderstorm, tornado, flood, heat, freeze, fire weather) for a Dallas location. Defaults to central Dallas when no address given. |
 | `dallas_tea_schools` | Texas Education Agency school lookup — A-F accountability ratings + AskTED campus directory (statewide dataset). Search by campus, district, county, or city. Example districts: Dallas ISD, Plano ISD, Highland Park ISD. |
+| `dallas_311` | City of Dallas 311 service requests (code compliance, streets, sanitation, etc). Filter by type, department, status, council district, or address. |
 | `about` | Version + capability summary. |
 
 ## Sources of Truth
@@ -63,6 +65,7 @@ claude mcp add local-dallas npx -y github:mindwear-capitian/local-dallas-mcp
 |--------|--------|
 | Weather alerts | National Weather Service (api.weather.gov) |
 | School ratings | Texas Education Agency Statewide Accountability Ratings 2022-2023 + AskTED directory (data.texas.gov) — statewide dataset, same source used by [local-austin-mcp](https://github.com/mindwear-capitian/local-austin-mcp) |
+| 311 service requests | City of Dallas Open Data (dallasopendata.com), dataset `gc4d-8a49` |
 | Geocoding | U.S. Census geocoder |
 
 ## Architecture

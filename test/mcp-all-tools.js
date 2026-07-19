@@ -37,9 +37,10 @@ const ARGS = {
   about: {},
   "dallas_nws_alerts": {},
   "dallas_tea_schools": { district: "Dallas ISD", limit: 3 },
+  "dallas_311": { department: "Code Compliance", limit: 3 },
 };
 
-const EXPECT_SUCCESS = new Set(["about", "dallas_nws_alerts", "dallas_tea_schools"]);
+const EXPECT_SUCCESS = new Set(["about", "dallas_nws_alerts", "dallas_tea_schools", "dallas_311"]);
 
 const PER_CALL_TIMEOUT = 30000;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
