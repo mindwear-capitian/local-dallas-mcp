@@ -1,0 +1,45 @@
+# Trademarks
+
+This software is licensed under the **Apache License 2.0** (see [LICENSE](LICENSE)).
+Section 6 of that license expressly grants **no trademark rights**. This notice
+states which marks are reserved and how they may be used.
+
+The following are trademarks of **{{MAINTAINER_NAME}}**{{MAINTAINER_ORG_SUFFIX}}:
+
+- "Local {{CITY}} MCP"
+- "{{MAINTAINER_NAME}}"{{MAINTAINER_ORG_SUFFIX}}
+- Any associated logo and word marks
+
+The Apache License 2.0 under which this software is distributed does **not**
+grant any right to use these marks.
+
+## What you may NOT do
+
+In any fork, derivative, redistribution, or other use of this software, you
+may not:
+
+- Use the marks in the name of your fork, product, service, package,
+  container, repository, or domain.
+- Use the marks in any way that suggests endorsement, sponsorship,
+  affiliation, partnership, or official relationship with {{MAINTAINER_NAME}}.
+- Use the marks in advertising, marketing, or promotional material.
+
+## What you MAY do
+
+You may refer to the marks factually for attribution purposes, including:
+
+- Stating that your fork is "based on Local {{CITY}} MCP by {{MAINTAINER_NAME}}".
+- Linking to {{MAINTAINER_URL}} as the origin of the project.
+- Ordinary descriptive references permitted under nominative fair use.
+
+## Permissions
+
+For any use of the marks beyond what is described above, you must obtain
+written permission in advance:
+
+**{{MAINTAINER_NAME}}**
+{{MAINTAINER_URL}}
+
+--
+TEMPLATE NOTE: fill in {{CITY}}, {{MAINTAINER_NAME}}, {{MAINTAINER_ORG_SUFFIX}},
+{{MAINTAINER_URL}} before shipping. Delete this note.

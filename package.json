@@ -1,0 +1,61 @@
+{
+  "name": "local-{{CITY_SLUG}}-mcp",
+  "version": "0.1.0",
+  "description": "Your AI's local guide to {{CITY}}: official, public, no-key data via MCP. Built from the local-city-mcp-template standard.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "local-{{CITY_SLUG}}-mcp": "index.js"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "tools/",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "TRADEMARK.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "prepublishOnly": "npm run test:unit",
+    "test": "node --test test/unit/*.test.js",
+    "test:unit": "node --test test/unit/*.test.js",
+    "test:contract": "node test/mcp-all-tools.js"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "claude-desktop",
+    "anthropic",
+    "llm-tools",
+    "ai-tools",
+    "{{CITY_SLUG}}",
+    "civic-data",
+    "open-data"
+  ],
+  "author": "{{MAINTAINER_NAME}}",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/{{GITHUB_USER}}/local-{{CITY_SLUG}}-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{GITHUB_USER}}/local-{{CITY_SLUG}}-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/{{GITHUB_USER}}/local-{{CITY_SLUG}}-mcp/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  }
+}
