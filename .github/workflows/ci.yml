@@ -32,5 +32,8 @@ jobs:
       - name: Unit tests
         run: npm test
 
-      - name: Contract test (boots server, calls every tool via real MCP layer)
-        run: npm run test:contract
+      # Deliberately NOT running test:contract here -- it hits live upstream
+      # APIs, which would make this required per-push check flaky for
+      # reasons unrelated to the change being reviewed. See
+      # .github/workflows/contract.yml (scheduled + manual dispatch) and
+      # local-city-mcp-template's STANDARD.md section 6.
